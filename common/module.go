@@ -29,5 +29,5 @@ type ModuleManager interface {
 	// Submodules
 	RegisterExternalChat(channelID string, chat ExternalChatModule) error
 
-	GetConfig() (*os.File, error)
+	GetConfig(string) (*os.File, error)
 }
