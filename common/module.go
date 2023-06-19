@@ -1,5 +1,7 @@
 package common
 
+import "os"
+
 type Module interface {
 	Initialize(birdbot ModuleManager) error
 }
@@ -26,4 +28,6 @@ type ModuleManager interface {
 
 	// Submodules
 	RegisterExternalChat(channelID string, chat ExternalChatModule) error
+
+	GetConfig() (*os.File, error)
 }
