@@ -1,7 +1,5 @@
 package common
 
-import "os"
-
 type Module interface {
 	Initialize(birdbot ModuleManager) error
 }
